@@ -1,0 +1,27 @@
+env:
+  size: 64
+  n_buttons: 4
+  max_steps: 40
+  step_px: 3
+demos:
+  episodes: 2000
+  noise: 0.15            # fraction of random "human" actions
+bc:
+  epochs: 10
+  batch_size: 256
+  lr: 1.0e-3
+ppo:
+  iterations: 60
+  n_envs: 16
+  rollout_steps: 64
+  epochs: 4
+  minibatch: 512
+  lr: 1.0e-4
+  gamma: 0.97
+  gae_lambda: 0.95
+  clip: 0.2
+  ent_coef: 0.005
+  vf_coef: 0.5
+  value_warmup_iters: 5  # train only the critic first so PPO doesn't wreck the BC policy
+eval_episodes: 200
+artifacts_dir: artifacts

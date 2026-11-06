@@ -1,0 +1,8 @@
+torch>=2.2          # install the CUDA build for GPU training
+gymnasium>=0.29
+numpy
+pyyaml
+onnx>=1.16
+onnxscript
+onnxruntime>=1.18   # or onnxruntime-gpu for CUDAExecutionProvider
+# live control (optional): mss, pyautogui
